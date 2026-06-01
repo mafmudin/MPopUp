@@ -1,5 +1,15 @@
 # MPopUp
 
+popup / dialog kustom untuk Android — konfigurasi judul, pesan, warna, radius, dan tombol lewat builder, atau pakai custom layout sendiri.
+
+## Kompatibilitas / Catatan versi
+
+Mulai `1.0.0` library di-migrasi ke **AndroidX** dengan **minSdk 21** (toolchain modern: AGP 8 / Gradle 8 / JDK 17). Pastikan project konsumer mengaktifkan AndroidX (`android.useAndroidX=true` di `gradle.properties`).
+
+- Penomoran versi memakai **semver** (`1.0.0`, tanpa prefix `v`). Tag lama `v1` adalah build *legacy* berbasis Android Support Library (minSdk 15).
+- Public API tidak berubah — `setTitle`, `setMessage`, `customLayout`, dll. tetap sama; yang berganti hanya dependency internal (support → AndroidX).
+- Jika belum bisa pakai AndroidX, pin versi lama: `com.github.mafmudin:MPopUp:v1`.
+
 ### cara menambahkan MPopUp ke project android studio dengan menggunakan gradle
 *  tambahkan kode di bawah kedalam file ```build.gradle``` (root project)
 ```
@@ -14,7 +24,7 @@ allprojects {
 * lalu, tambahkan dependesi berikut kedalam file ```build.gradle``` (module aplikasi)
 ```
 dependencies {
-	 implementation 'com.github.mafmudin:MPopUp:v1'
+	 implementation 'com.github.mafmudin:MPopUp:1.0.0'
 }
 ```
 
@@ -36,7 +46,7 @@ dependencies {
 <dependency>
 	<groupId>com.github.mafmudin</groupId>
 	<artifactId>MPopUp</artifactId>
-	<version>v1</version>
+	<version>1.0.0</version>
 </dependency>
 ```
 
